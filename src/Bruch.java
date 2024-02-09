@@ -16,8 +16,23 @@ public class Bruch {
     public Bruch kürze() {
         long neuerZähler = this.zähler;
         long neuerNenner = this.nenner;
-        // TODO
-        return new Bruch(neuerZähler, neuerNenner);
+        long teiler = ggT(neuerNenner, neuerZähler);
+        return new Bruch(neuerZähler / teiler, neuerNenner / teiler);
+    }
+
+    private static long ggT(long a, long b) {
+        if (a == 0) return b;
+        if (b == 0) return a;
+        if (a < 0) a = -a;
+        if (b < 0) b = -b;
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
     }
 
     public String toString() {
