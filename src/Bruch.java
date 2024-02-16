@@ -7,17 +7,26 @@ public class Bruch {
         this.nenner = nenner;
     }
 
-    // TODO
     public Bruch() {
-        // was passiert denn hier?
+        this(1, 1);
     }
 
     public Bruch(long ganzzahl) {
-        // und was passiert hier?
+        this(ganzzahl, 1);
     }
 
     public Bruch(double zahl) {
-        // und wie geht das?
+        long teiler = 1;
+        while ( zahlHatNachkommastellen(zahl) ) {
+            zahl *= 10;
+            teiler *= 10;
+        }
+        this.zähler = (long)zahl;
+        this.nenner = teiler;
+    }
+
+    private static boolean zahlHatNachkommastellen(double zahl) {
+        return (zahl - Math.floor(zahl)) > 0.0;
     }
 
     public Bruch add(Bruch b) {

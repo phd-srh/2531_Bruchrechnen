@@ -40,6 +40,10 @@ public class Main {
         berechne('/', b4, b5);
         berechne('=', b1, b2);
         berechne('=', b1, b4);
+
+        System.out.println( new Bruch( 3.14 ) );
+        System.out.println( new Bruch( 2.7325449) );
+        System.out.println( new Bruch( 747.0 ) );
     }
 
 }
