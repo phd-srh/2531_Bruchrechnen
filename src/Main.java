@@ -9,8 +9,11 @@ public class Main {
             case '-':
                 System.out.println(bruch1.sub(bruch2));
                 break;
+            case '*':
+                System.out.println(bruch1.mult(bruch2));
+                break;
             default:
-                System.out.println("unbekannte Operation ");
+                System.out.println("unbekannte Operation");
         }
     }
 
@@ -26,6 +29,7 @@ public class Main {
         berechne('+', b2, b5);
         berechne('-', b1, b2);
         berechne('-', b1, b4);
+        berechne('*', b1, b2);
     }
 
 }

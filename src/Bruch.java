@@ -17,6 +17,12 @@ public class Bruch {
         return this.add( b.negiere() );
     }
 
+    public Bruch mult(Bruch b) {
+        long neuerZähler = this.zähler * b.zähler;
+        long neuerNenner = this.nenner * b.nenner;
+        return new Bruch(neuerZähler, neuerNenner).kürze();
+    }
+
     public Bruch negiere() {
         long neuerZähler = -this.zähler;
         long neuerNenner = this.nenner;
