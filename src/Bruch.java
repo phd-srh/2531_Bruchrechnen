@@ -23,6 +23,14 @@ public class Bruch {
         return new Bruch(neuerZähler, neuerNenner).kürze();
     }
 
+    public Bruch div(Bruch b) {
+        return this.mult( b.kehrWert() );
+    }
+
+    public Bruch kehrWert() {
+        return new Bruch( this.nenner, this.zähler );
+    }
+
     public Bruch negiere() {
         long neuerZähler = -this.zähler;
         long neuerNenner = this.nenner;
@@ -40,8 +48,10 @@ public class Bruch {
         return new Bruch(neuerZähler / teiler, neuerNenner / teiler);
     }
 
-
-
+    public boolean isEqual(Bruch b) {
+        Bruch testDivision = this.div(b);
+        return testDivision.zähler == testDivision.nenner;
+    }
 
     private static long ggT(long a, long b) {
         if (a == 0) return b;

@@ -12,6 +12,12 @@ public class Main {
             case '*':
                 System.out.println(bruch1.mult(bruch2));
                 break;
+            case '/': case '\\':
+                System.out.println(bruch1.div(bruch2));
+                break;
+            case '=':
+                System.out.println(bruch1.isEqual(bruch2));
+                break;
             default:
                 System.out.println("unbekannte Operation");
         }
@@ -30,6 +36,10 @@ public class Main {
         berechne('-', b1, b2);
         berechne('-', b1, b4);
         berechne('*', b1, b2);
+        berechne('/', b1, b2);
+        berechne('/', b4, b5);
+        berechne('=', b1, b2);
+        berechne('=', b1, b4);
     }
 
 }
