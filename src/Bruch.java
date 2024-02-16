@@ -7,6 +7,19 @@ public class Bruch {
         this.nenner = nenner;
     }
 
+    // TODO
+    public Bruch() {
+        // was passiert denn hier?
+    }
+
+    public Bruch(long ganzzahl) {
+        // und was passiert hier?
+    }
+
+    public Bruch(double zahl) {
+        // und wie geht das?
+    }
+
     public Bruch add(Bruch b) {
         long neuerZähler = this.zähler * b.nenner + b.zähler * this.nenner;
         long neuerNenner = this.nenner * b.nenner;
