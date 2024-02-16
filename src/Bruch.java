@@ -26,7 +26,8 @@ public class Bruch {
     }
 
     private static boolean zahlHatNachkommastellen(double zahl) {
-        return (zahl - Math.floor(zahl)) > 0.0;
+        return (zahl % 1) > 0.0; // modulo geht hier in Java
+        // return (zahl - Math.floor(zahl)) > 0.0; -- option 1
     }
 
     public Bruch add(Bruch b) {
